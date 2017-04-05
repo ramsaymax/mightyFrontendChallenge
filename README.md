@@ -11,7 +11,9 @@ https://mightysignal.com/challenge/frontend
 
 3. `cd` into the project folder `mightyFrontendChallenge`
 
-4. type `meteor` to run the app
+4. Install the bable runtime `meteor npm install --save babel-runtime`
 
-5. navigate to `localhost:3000` 
+5. type `meteor` to run the app
+
+6. navigate to `localhost:3000` 
 
