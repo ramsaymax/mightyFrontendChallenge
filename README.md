@@ -15,5 +15,5 @@ https://mightysignal.com/challenge/frontend
 
 5. Type `meteor` inside the project folder to launch the app (it may take a minute to install the dependencies) 
 
-6. Finally, navigate to `localhost:3000` and login or create an account. 
+6. Finally, navigate to `localhost:3000` and create an account to login. 
 
