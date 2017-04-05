@@ -1,7 +1,6 @@
-# Project Name
+# The Mighty Frontend Challenge
 
-The Mighty Frontend Challenge
-
+Read more here... 
 https://mightysignal.com/challenge/frontend
 
 ## Installation
