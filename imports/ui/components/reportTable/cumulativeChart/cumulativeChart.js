@@ -1,4 +1,4 @@
-import './revenueChart.html'
+import './cumulativeChart.html'
 
 import {
     Accounts
@@ -7,7 +7,7 @@ import {
     Tracker
 } from 'meteor/tracker'
 
-Template.revenueChart.onRendered(function() {
+Template.cumulativeChart.onRendered(function() {
 
     Tracker.autorun(() => {
         aggregateArray = ReactiveMethod.call("accounts.aggregateTotal");
@@ -32,7 +32,7 @@ Template.revenueChart.onRendered(function() {
   ]
 }, {
   fullWidth: true,
-  height: '300px',
+  height: '150px',
   chartPadding: {
     right: 40
   }

@@ -1,4 +1,5 @@
 import './reportTable.html';
-import './monthlyRevenue/monthlyRevenue.js';
+import './cumulativeTotals/cumulativeTotals.js';
 import './monthlyTotals/monthlyTotals.js';
-import './revenueChart/revenueChart.js';
+import './cumulativeChart/cumulativeChart.js';
+import './monthlyChart/monthlyChart.js';

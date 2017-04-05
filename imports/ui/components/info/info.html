@@ -27,16 +27,20 @@
           </thead>
 
           <tbody>
+            {{#transition in="fadeIn" out="bounceOut"}}
+
             {{#each accounts}}
 
-            <tr>
-              <td> <a class="btn-floating btn-tiny waves-effect waves-light purple lighten-3 btn-remove"><i data="{{_id}}" class="material-icons">close</i></a></td>
+            <tr class="animated out">
+              <td> <a onclick="Materialize.toast('Removed {{name}}', 2000)" class=" btn-floating btn-tiny waves-effect waves-light purple lighten-3 btn-remove"><i data="{{_id}}" class="material-icons">close</i></a></td>
 
               <td>{{name}}</td>
               <td>{{date}}</td>
               <td class="right-align">{{amount}}</td>
             </tr>
             {{/each}}
+            {{/transition}}
+
           </tbody>
         </table>
 

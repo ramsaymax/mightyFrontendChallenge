@@ -76,6 +76,7 @@ Meteor.methods({
                 // aggregateArr[key]._id.month = monthDict[aggregateArr[key]._id.month]
                 aggregateArr[key].month = monthDict[aggregateArr[key]._id.month]
                 aggregateArr[key].year = aggregateArr[key]._id.year
+                aggregateArr[key].balance = aggregateArr[key].total
                 aggregateArr[key].total = numeral(aggregateArr[key].total).format('$0,0.00')
                 aggregateArr[key]._id = ""
                 // console.log(monthDict[aggregateArr[key]._id],aggregateArr[key]._id);

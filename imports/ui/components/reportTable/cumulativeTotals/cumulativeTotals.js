@@ -1,11 +1,11 @@
-import './monthlyRevenue.html'
+import './cumulativeTotals.html'
 
 import { Accounts } from '/imports/api/links/links.js';
 
 
 
 
-Template.monthlyRevenue.helpers({
+Template.cumulativeTotals.helpers({
     aggregate() {
 
         // Meteor.call('accounts.aggregate', (error,results) => {
