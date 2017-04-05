@@ -1,4 +1,5 @@
 <template name="App_home">
-
-  {{> info}}
+  {{#if currentUser}}
+    {{> info}}
+  {{/if}}
 </template>

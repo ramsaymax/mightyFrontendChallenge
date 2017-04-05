@@ -1,76 +1,51 @@
 <template name="info">
-
-  {{#if Template.subscriptionsReady}}
-
-  {{#if currentUser}}
-  <div class="container">
-    <br>
-    <br>
-    <br>
-    <br>
-    {{> inputForm}}
-
-
-    <div class="section ">
-      {{> totalRevenue}}
-      <ul>
-
-
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Account Name</th>
-              <th>Date Received</th>
-              <th class="right-align">Amount</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {{#transition in="fadeIn" out="bounceOut"}}
-
-            {{#each accounts}}
-
-            <tr class="animated out">
-              <td> <a onclick="Materialize.toast('Removed {{name}}', 2000)" class=" btn-floating btn-tiny waves-effect waves-light purple lighten-3 btn-remove"><i data="{{_id}}" class="material-icons">close</i></a></td>
-
-              <td>{{name}}</td>
-              <td>{{date}}</td>
-              <td class="right-align">{{amount}}</td>
-            </tr>
-            {{/each}}
-            {{/transition}}
-
-          </tbody>
-        </table>
-
-      </ul>
-
-    </div>
-
+{{#if Template.subscriptionsReady}}
+<div class="container">
+  <br>
+  {{>search}}
+  <br>
+  <br>
+  <br>
+  {{> inputForm}}
+  <div class="section ">
+    {{> totalRevenue}}
+    <ul>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Account Name</th>
+            <th>Date Received</th>
+            <th class="right-align">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#transition in="fadeIn"}}
+          {{#each accounts}}
+          <tr class="animated out">
+            <td> <a onclick="Materialize.toast('Removed {{name}}', 2000)" class=" btn-floating btn-tiny waves-effect waves-light purple lighten-3 btn-remove"><i data="{{_id}}" class="material-icons">close</i></a></td>
+            <td>{{name}}</td>
+            <td>{{date}}</td>
+            <td class="right-align">{{amount}}</td>
+          </tr>
+          {{/each}}
+          {{/transition}}
+        </tbody>
+      </table>
+    </ul>
   </div>
-
-  {{else}}
-  <div class="container">
-    Please login to continue
-  </div>
-
-  {{/if}}
-
-  {{else}}
-
-  <div class="preloader-wrapper big active">
+</div>
+{{else}}
+<div class="preloader-wrapper big active">
   <div class="spinner-layer spinner-blue-only">
     <div class="circle-clipper left">
       <div class="circle"></div>
     </div><div class="gap-patch">
-      <div class="circle"></div>
-    </div><div class="circle-clipper right">
-      <div class="circle"></div>
-    </div>
-  </div>
+    <div class="circle"></div>
+  </div><div class="circle-clipper right">
+  <div class="circle"></div>
 </div>
-
+</div>
+</div>
 {{/if}}
-
 </template>

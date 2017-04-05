@@ -2,12 +2,15 @@
   <nav class="light-red lighten-1" role="navigation">
 
       <div class="nav-wrapper container">
-
+        
         <a id="logo-container" href="#" class="brand-logo"><h4>PAYMENTS</h4></a>
 
+        
         <ul class="right hide-on-med-and-down">
           <li><a href="#">{{> loginButtons}}</a></li>
         </ul>
+          {{#if currentUser}}
+          
 
         <ul class="right hide-on-med-and-down">
           <li><a href="/reports">Monthly Reports</a></li>
@@ -17,7 +20,7 @@
           <li><a href="/">Accounts</a></li>
         </ul>
 
-
+  {{/if}}
 
 
       </div>

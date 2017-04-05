@@ -1,11 +1,15 @@
-import { Links } from '/imports/api/links/links.js';
-import { Accounts } from '/imports/api/links/links.js';
+import {
+    Accounts
+} from '/imports/api/accounts/accounts.js';
 
-import { Meteor } from 'meteor/meteor';
+import {
+    Meteor
+} from 'meteor/meteor';
+
 import './info.html';
-
 import '/imports/ui/components/totalRevenue/totalRevenue.js';
 import '/imports/ui/components/inputForm/inputForm.js';
+import '/imports/ui/components/search/search.js';
 
 
 
@@ -16,7 +20,11 @@ Template.info.onCreated(function() {
 
 Template.info.helpers({
     accounts() {
-        accounts = Accounts.find({}, { sort: { date: -1 } }).fetch();
+        accounts = Accounts.find({}, {
+            sort: {
+                date: -1
+            }
+        }).fetch();
         for (var i = 0; i < accounts.length; i++) {
             accounts[i].date = moment(accounts[i].date).format('MMMM Do YYYY')
             accounts[i].amount = numeral(accounts[i].amount).format('$0,0.00')
@@ -27,13 +35,10 @@ Template.info.helpers({
 });
 
 Template.info.events({
-
     'click .btn-remove' (event) {
         event.preventDefault();
         id = $(event.target).attr("data");
 
-        Meteor.call('accounts.remove', id, (error) => {
-
-        });
+        Meteor.call('accounts.remove', id, (error) => {});
     }
 });

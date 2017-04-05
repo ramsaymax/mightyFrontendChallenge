@@ -1,49 +1,41 @@
 <template name="monthlyTotals">
-
-    {{#if aggregate}}
-    <br>
-
-    <h4 class="titles">Monthly Revenue</h4>
-    <table>
-      <thead>
-        <tr>
-          {{#each aggregate}}
-          <th>{{month}} {{year}} </th>
-          <!-- <th>Item Name</th> -->
-          {{/each}}
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-
-          {{#each aggregate}}
-          <!-- <td>{{_id}}</td> -->
-          <td>{{total}}</td>
-          {{/each}}
-        </tr>
-
-      </tbody>
-    </table>
-    {{else}}
-    <div class="container">
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="preloader-wrapper big active center-align">
-        <div class="spinner-layer spinner-blue-only center-align">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div>
-          <div class="gap-patch">
-            <div class="circle"></div>
-          </div>
-          <div class="circle-clipper right">
-            <div class="circle"></div>
-          </div>
-        </div>
+{{#if aggregate}}
+<h4 class="titles">Monthly Revenue</h4>
+<table>
+  <thead>
+    <tr>
+      {{#each aggregate}}
+      <th>{{month}} {{year}} </th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {{#each aggregate}}
+      <td>{{total}}</td>
+      {{/each}}
+    </tr>
+  </tbody>
+</table>
+{{else}}
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="preloader-wrapper big active center-align">
+    <div class="spinner-layer spinner-blue-only center-align">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
       </div>
     </div>
-    {{/if}}
+  </div>
+</div>
+{{/if}}
 </template>

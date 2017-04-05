@@ -1,13 +1,10 @@
 <template name="reportTable">
-
-  {{#animate type="fadeInDown" delay="200"}}
-
+{{#animate type="fadeInDown" delay="200"}}
+<br>
+{{>totalRevenue}}
 {{>monthlyTotals}}
 {{>monthlyChart}}
-
 {{>cumulativeTotals}}
 {{>cumulativeChart}}
-
 {{/animate}}
-
 </template>

@@ -1,6 +1,6 @@
 import './inputForm.html'
 
-import { Accounts } from '/imports/api/links/links.js';
+import { Accounts } from '/imports/api/accounts/accounts.js';
 
 import { Meteor } from 'meteor/meteor';
 

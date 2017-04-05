@@ -4,7 +4,6 @@ font-style: normal;
 font-weight: 400;
 src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v7/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
-
 .material-icons {
 font-family: 'Material Icons';
 font-weight: normal;
@@ -18,45 +17,50 @@ word-wrap: normal;
 -webkit-font-feature-settings: 'liga';
 -webkit-font-smoothing: antialiased;
 }
-
 div.section {
-  padding-top: 0px!important
-
+padding-top: 0px!important
 }
-
 .inputRow {
-  width: 70%!important
+width: 70%!important
 }
-
+.absolute {
+position: absolute!important;
+color: purple
+}
 .dropdown-content {
-  width: 340px!important
+color: black!important;
+padding: 10px!important;
+width: 340px!important
 }
-
+#forgot-password-link {
+color: black!important;
+}
+#signup-link {
+color: black!important;
+}
+.login-other-options {
+color: black!important
+}
 .dropdown-button {
-  margin-right: 0px!important;
-  padding-right: 0px!important
+margin-right: 0px!important;
+padding-right: 0px!important
 }
-
 h4.titles {
-  font-weight: bold;
-  font-size: 23px
+font-weight: bold;
+font-size: 23px
 }
-
 input.datepicker {
-  color: grey
+color: grey
 }
-
 .ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
-    stroke: #0CC162;
+stroke: #0CC162;
 }
 .ct-series-b .ct-bar, .ct-series-b .ct-line, .ct-series-b .ct-point, .ct-series-b .ct-slice-donut {
-    stroke: #BBBBBB;
+stroke: #BBBBBB;
 }
-
 div.ct-chart2.ct-perfect-fourth {
-  height: 150px!important
+height: 150px!important
 }
-
 div.ct-chart.ct-perfect-fourth {
-  height: 200px!important
+height: 200px!important
 }
