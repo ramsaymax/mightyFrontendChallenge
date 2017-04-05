@@ -1,5 +1,9 @@
 <template name="App_reports">
   <div class="container">
-    {{>reportTable}}
+
+    {{#if currentUser}}
+       {{>reportTable}}
+  {{/if}}
+
 </div>
 </template>

@@ -11,7 +11,6 @@ Meteor.publish('accounts.all', function(search) {
 
     let query = {},
         projection = {
-            limit: 10,
             sort: {
                 title: 1
             }
