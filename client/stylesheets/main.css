@@ -4,6 +4,12 @@ font-style: normal;
 font-weight: 400;
 src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v7/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
 }
+
+@font-face {
+    font-family: SS;
+    src: url("/SS.ttf");
+}
+
 .material-icons {
 font-family: 'Material Icons';
 font-weight: normal;
@@ -45,6 +51,12 @@ color: black!important
 margin-right: 0px!important;
 padding-right: 0px!important
 }
+
+h4.header {
+  font-family: SS!important;
+  letter-spacing: 1.5px!important;
+}
+
 h4.titles {
 font-weight: bold;
 font-size: 23px

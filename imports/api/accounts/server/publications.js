@@ -7,22 +7,7 @@ import {
 
 
 Meteor.publish('accounts.all', function(search) {
-    check(search, Match.OneOf(String, null, undefined));
 
-    let query = {},
-        projection = {
-            sort: {
-                title: 1
-            }
-        };
-    if (search) {
-        let regex = new RegExp(search, 'i');
 
-        query = {
-            "name": regex
-        };
-
-        projection.limit = 100;
-    }
-    return Accounts.find(query, projection);
+    return Accounts.find({})
 });
