@@ -6,6 +6,11 @@ src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.g
 }
 
 @font-face {
+    font-family: ssp;
+    src: url("/SourceSansPro-ExtraLight.ttf");
+}
+
+@font-face {
     font-family: SS;
     src: url("/SS.ttf");
 }
@@ -52,6 +57,11 @@ margin-right: 0px!important;
 padding-right: 0px!important
 }
 
+body {
+	font-family: ssp
+}
+
+
 h4.header {
   font-family: SS!important;
   letter-spacing: 1.5px!important;
@@ -61,8 +71,31 @@ h4.titles {
 font-weight: bold;
 font-size: 23px
 }
+input::-webkit-input-placeholder {
+color: black !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: black !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: black !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: black !important;  
+}
+
+th {
+color: black!important
+}
+td {
+color: black!important
+}
+
 input.datepicker {
-color: #D1D1D1
+color: black
 }
 .ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
 stroke: #0CC162;

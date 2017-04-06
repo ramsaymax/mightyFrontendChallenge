@@ -2,24 +2,22 @@
 <div class="container">
   <br>
   <div class="input-field">
-  <input class="form-control" name="search" id="search" type="search" required>
-  <label for="search"><i class="material-icons">search</i></label>
-</div>
-
-{{#if searching}}
-<p class="absolute">Searching...</p>
-{{/if}}
-
+    <input  class="form-control" name="search" id="search" type="search" required>
+    <label for="search"><i class="material-icons">search</i></label>
+  </div>
+  {{#if searching}}
+  <p class="absolute">Searching...</p>
+  {{/if}}
   <br>
   <br>
   <br>
   {{> inputForm}}
   <div class="section">
     <div class="right-align">
-    <div  class="white-text purple lighten-2 chip">
-      Total Revenue: {{revenueCount}}
+      <div  class="white-text purple lighten-2 chip">
+        Total Revenue: {{revenueCount}}
+      </div>
     </div>
-  </div>  
     <ul>
       <table>
         <thead>
@@ -39,10 +37,8 @@
             <td>{{date}}</td>
             <td class="right-align">{{amount}}</td>
           </tr>
-
           {{else}}
-                  <p class="alert alert-warning">Nothing found for <b>{{query}}.</b>    Sorry!.</p>
-
+          <p class="alert alert-warning">Nothing found for <b>{{query}}.</b>    Sorry!.</p>
           {{/each}}
           {{/transition}}
         </tbody>
@@ -50,5 +46,4 @@
     </ul>
   </div>
 </div>
-
 </template>
