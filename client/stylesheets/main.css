@@ -62,7 +62,7 @@ font-weight: bold;
 font-size: 23px
 }
 input.datepicker {
-color: grey
+color: #D1D1D1
 }
 .ct-series-a .ct-bar, .ct-series-a .ct-line, .ct-series-a .ct-point, .ct-series-a .ct-slice-donut {
 stroke: #0CC162;

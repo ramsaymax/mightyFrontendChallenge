@@ -7,6 +7,8 @@ import {
 
 Template.totalRevenue.onCreated(function() {
     Meteor.subscribe('accounts.all')
+
+    
 });
 
 

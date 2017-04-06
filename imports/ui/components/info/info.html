@@ -1,16 +1,14 @@
 <template name="info">
-<!-- {{#if Template.subscriptionsReady}}
- --><div class="container">
+<div class="container">
   <br>
   <div class="input-field">
   <input class="form-control" name="search" id="search" type="search" required>
   <label for="search"><i class="material-icons">search</i></label>
 </div>
 
-<!-- {{#if searching}}
+{{#if searching}}
 <p class="absolute">Searching...</p>
-{{/if}} -->
-
+{{/if}}
 
   <br>
   <br>
@@ -29,30 +27,24 @@
           </tr>
         </thead>
         <tbody>
+          {{#transition in="fadeIn"}}
           {{#each accounts}}
-          <tr>
+          <tr class="animated out">
             <td> <a onclick="Materialize.toast('Removed {{name}}', 2000)" class=" btn-floating btn-tiny waves-effect waves-light purple lighten-3 btn-remove"><i data="{{_id}}" class="material-icons">close</i></a></td>
             <td>{{name}}</td>
             <td>{{date}}</td>
             <td class="right-align">{{amount}}</td>
           </tr>
+
+          {{else}}
+                  <p class="alert alert-warning">Nothing found for <b>{{query}}.</b>  Sorry!.</p>
+
           {{/each}}
+          {{/transition}}
         </tbody>
       </table>
     </ul>
   </div>
 </div>
-<!-- {{else}}
- --><!-- < --><!-- div class="preloader-wrapper big active">
-  <div class="spinner-layer spinner-blue-only">
-    <div class="circle-clipper left">
-      <div class="circle"></div>
-    </div><div class="gap-patch">
-    <div class="circle"></div>
-  </div><div class="circle-clipper right">
-  <div class="circle"></div>
-</div>
-</div>
-</div> -->
-<!-- {{/if}}
- --></template>
+
+</template>
