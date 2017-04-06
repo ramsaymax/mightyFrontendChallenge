@@ -28,45 +28,44 @@ Template.info.onCreated(() => {
 });
 
 Template.info.helpers({
-    accounts(event,template) {
+    accounts(event, template) {
 
-        search =  Template.instance().searchQuery.get()
+        search = Template.instance().searchQuery.get()
         if (search) {
-        console.log(search)
+            console.log(search)
 
-        let regex = new RegExp(search, 'i');
+            let regex = new RegExp(search, 'i');
 
-        query = {
-            "name": regex
-        };
-        accounts = Accounts.find(query, {
-            sort: {
-                date: -1
+            query = {
+                "name": regex
+            };
+            accounts = Accounts.find(query, {
+                sort: {
+                    date: -1
+                }
+            }).fetch();
+            for (var i = 0; i < accounts.length; i++) {
+                accounts[i].date = moment(accounts[i].date).format('MMMM Do YYYY')
+                accounts[i].amount = numeral(accounts[i].amount).format('$0,0.00')
             }
-        }).fetch();
-        for (var i = 0; i < accounts.length; i++) {
-            accounts[i].date = moment(accounts[i].date).format('MMMM Do YYYY')
-            accounts[i].amount = numeral(accounts[i].amount).format('$0,0.00')
-        }
-        return accounts 
+            return accounts
 
-         }
-         else {
+        } else {
             accounts = Accounts.find({}, {
-            sort: {
-                date: -1
+                sort: {
+                    date: -1
+                }
+            }).fetch();
+            for (var i = 0; i < accounts.length; i++) {
+                accounts[i].date = moment(accounts[i].date).format('MMMM Do YYYY')
+                accounts[i].amount = numeral(accounts[i].amount).format('$0,0.00')
             }
-        }).fetch();
-        for (var i = 0; i < accounts.length; i++) {
-            accounts[i].date = moment(accounts[i].date).format('MMMM Do YYYY')
-            accounts[i].amount = numeral(accounts[i].amount).format('$0,0.00')
+            return accounts
         }
-        return accounts 
-         }
 
 
 
-        
+
     },
     searching() {
         return Template.instance().searching.get();
@@ -74,11 +73,35 @@ Template.info.helpers({
     query() {
         return Template.instance().searchQuery.get();
     },
-    //  accounts() {
-    //    return Accounts.find({})
 
-    // }
+    revenueCount() {
+        search = Template.instance().searchQuery.get()
+        if (search) {
+            let regex = new RegExp(search, 'i');
 
+            query = {
+                "name": regex
+            };
+            revenueCount = Accounts.find(query).fetch();
+            total = 0
+            for (var i = 0; i < revenueCount.length; i++) {
+                total = total + revenueCount[i].amount
+            }
+
+            total = numeral(total).format('$0,0.00');
+            return total
+        } else {
+            revenueCount = Accounts.find({}).fetch();
+            total = 0
+            for (var i = 0; i < revenueCount.length; i++) {
+                total = total + revenueCount[i].amount
+            }
+
+            total = numeral(total).format('$0,0.00');
+            return total
+        }
+
+    },
 });
 
 Template.info.events({

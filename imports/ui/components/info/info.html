@@ -14,8 +14,12 @@
   <br>
   <br>
   {{> inputForm}}
-  <div class="section ">
-    {{> totalRevenue}}
+  <div class="section">
+    <div class="right-align">
+    <div  class="white-text purple lighten-2 chip">
+      Total Revenue: {{revenueCount}}
+    </div>
+  </div>  
     <ul>
       <table>
         <thead>
@@ -37,7 +41,7 @@
           </tr>
 
           {{else}}
-                  <p class="alert alert-warning">Nothing found for <b>{{query}}.</b>  Sorry!.</p>
+                  <p class="alert alert-warning">Nothing found for <b>{{query}}.</b>    Sorry!.</p>
 
           {{/each}}
           {{/transition}}
